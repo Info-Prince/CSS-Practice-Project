@@ -111,15 +111,19 @@ p{
             font-size: 1.7rem;
             & .login {
                 border: 2px solid black;
-                padding: 0.5rem 1rem;
+                padding: 0.8rem 1rem;
                 background-color: white;
                 color: black;
+                border-radius: 1rem;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             }
-            & .singUp {
+            & .signUp {
                 border: 2px solid black;
-                padding: 0.5rem 1rem;
+                padding: 0.8rem 1rem;
                 background-color: #fa7407;
                 color: white;
+                border-radius: 1rem;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             }
         }
     }
