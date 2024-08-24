@@ -1,0 +1,126 @@
+/* Base Rule */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Urbanist', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    /* 1rem = 10px */
+    scroll-behavior: smooth;
+}
+body {
+    background-image: url(../Images/bg-image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+
+}
+
+p{
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    word-spacing: 2px;
+}
+
+/* Base Rule End here */
+
+
+
+
+/*! ***********LAYOUT START HERE************  */
+.container {
+    max-width: 160rem;
+    margin: 0 auto;
+    padding: 2rem 4rem;
+}
+.flex {
+    display: flex;
+}
+/*! ***********LAYOUT end HERE************  */
+
+
+/* Module / Reusable */
+
+/* Module / Reusable end */
+
+
+
+/* Start navbar section */
+.section-navbar {
+    background-color: #bebfc1;
+    color: black;
+    & .nav-container {
+        align-items: center;
+        justify-content: space-between;
+        height: 6rem;
+
+        & .navbar-menu {
+            gap: 1.5rem;
+            & .menu{
+                border: 2px solid black;
+                padding: 0.5rem 1rem;
+                border-radius: 2rem;
+                font-size: 2rem;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                background-color: white;
+            }
+            & .menu-icon{
+                width: 6rem;
+                height: auto;
+                color: black;
+                background-color: #fa7407;
+                border-radius: 2rem;
+                align-items: start;
+                justify-content: center;
+                flex-direction: column;
+                gap: 0.5rem;
+                padding-left: 1.5rem;
+                border: 2px solid black;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+                & .line1, .line2 , .line3 {
+                    border-radius: 3px;
+                }
+                & .line1, .line3 {
+                    width: 2.6rem;
+                    height: 3px;
+                    background-color:white;           
+                }   
+                & .line2 {
+                    width: 1.8rem;
+                    height: 4px;
+                    background-color: white;
+                }
+            }
+        }
+
+        & .navbar-brand p{
+            font-size: 3.3rem;
+            font-weight: 900;
+        }
+
+        & .navbar-login {
+            gap: 1.5rem;
+            font-size: 1.7rem;
+            & .login {
+                border: 2px solid black;
+                padding: 0.5rem 1rem;
+                background-color: white;
+                color: black;
+            }
+            & .singUp {
+                border: 2px solid black;
+                padding: 0.5rem 1rem;
+                background-color: #fa7407;
+                color: white;
+            }
+        }
+    }
+}
