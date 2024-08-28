@@ -159,7 +159,7 @@ p{
         position: absolute;
         left: 8.4%;
         top: 17.8%;
-        animation: left-to-right 2s linear;
+        animation: left-to-right 2s linear forwards;
         
         & .card {
             width: auto;
@@ -196,11 +196,19 @@ p{
     }
 }
 
+
 @keyframes left-to-right {
-    fron {
+    0% {
         left: 0;
+        opacity: 0.2;
     }
-    to {
+    
+    50% {
+        opacity: 0.7;
+        /* left: 18%; */
+    }
+    100% {
+        opacity: 1;
         left: 47%;
     }
 }
