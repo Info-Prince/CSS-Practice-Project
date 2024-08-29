@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Urbanist', sans-serif;
+    /* overflow: hidden; */
 }
 
 html{
@@ -143,7 +144,7 @@ p{
         flex-direction: column;
         gap: 2rem;
         & .heading .heading1, .heading2 {
-            font-size: 6rem;
+            font-size: 8rem;
             line-height: 1.2;
         }
         & .bold-para {
@@ -157,14 +158,14 @@ p{
         align-items: center;
         justify-content: center;
         position: absolute;
-        left: 8.4%;
-        top: 17.8%;
-        animation: left-to-right 2s linear forwards;
+        left: 20.4%;
+        top: 54.8%;
+        animation: left-to-right 5s linear forwards;
         
         & .card {
             width: auto;
             height: auto;
-            position: relative[];
+            position: relative;
         }
         & .card img{
             /* position: relative; */
@@ -173,22 +174,29 @@ p{
             background-size: cover;
             border-radius: 1rem;
         }
-        & .card1 img{
+        & .card1 {
             position: absolute;
             transform: rotate(-21deg);
-            order: 1;
+            z-index: 3;
+            left: 0;
         }
-        & .card2 img{
+        & .card2 {
             position: absolute;
-            left: 23rem;
             transform: rotate(-21deg);
             order: -2;
+            left: 11rem;
+            z-index: 1;
+            left: revert-layer;
+            animation: rightMove 5s linear forwards;
         }
-        & .card3 img {
+        & .card3  {
             position: absolute;
-            left: 45rem;
             transform: rotate(-21deg);
-            order: 3;
+            order: -93;
+            left: 36rem;
+            z-index: 0;
+            left: revert-layer;
+            animation: rightMove2 5s linear forwards;
             
         }
         
@@ -196,19 +204,54 @@ p{
     }
 }
 
-
 @keyframes left-to-right {
     0% {
-        left: 0;
+        left: 0%;
         opacity: 0.2;
     }
-    
-    50% {
+    20% {
         opacity: 0.7;
-        /* left: 18%; */
+    }
+    75% {
+        opacity: 0.9;
     }
     100% {
         opacity: 1;
-        left: 47%;
+        left: 44%;
     }
+} 
+
+@keyframes rightMove {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 24rem;
+    }
+}
+
+@keyframes rightMove2 {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 48rem;
+    }
+}
+
+
+
+/* footer */
+footer .section-footer {
+    & .icons img {
+        width: 13rem;
+    }
+    & .body-content {
+        font-weight: 800;
+        font-size: 3rem;
+    }
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 8rem;
+    padding-bottom: 0;
 }
