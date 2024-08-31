@@ -10,4 +10,62 @@ html {
     scroll-behavior: smooth;
 }
 
+p {
+    font-family: 'Urbanist';
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    word-spacing: 2px;
+    line-height: 1.4;
+    font-weight: 600;
+}
 /* Base Rule Ended */
+
+
+/* Layout Start here */
+.container {
+    max-width: 260rem;
+    margin: 0 auto;
+    padding: 1.4rem 4rem;
+}
+.flex {
+    display: flex;
+}
+/* Layout End here */
+
+
+/* Section Navbar Start here */
+.section-navbar {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    align-items: center;
+    justify-content: space-between;
+
+    & .nav-logo p{
+        font-size: 2.6rem;
+    }
+    & .nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+        font-size: 1.7rem;
+        list-style-type: none;
+        font-weight: 600;
+
+        & .links, .btn {
+            cursor: pointer;
+            border-bottom: 2px solid black;
+        }
+        & .links {
+            
+        }
+
+        & .btn {
+            background-color: #ff6500;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            color: white;
+            font-weight: 800;
+        }
+    }
+}
+/* Section Navbar End here */
