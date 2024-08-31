@@ -10,6 +10,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: ;
+}
+
 p {
     font-family: 'Urbanist';
     font-size: 1.8rem;
@@ -30,7 +34,33 @@ p {
 .flex {
     display: flex;
 }
+.grid {
+    display: grid;
+}
+.grid-two--cols {
+    grid-template-columns: repeat(2,1fr);
+}
 /* Layout End here */
+
+/* Reusable code */
+.btn {
+    background-color: #ff6500;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    color: white;
+    font-weight: 800;
+    border-bottom: 2px solid black;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    /* transition: all 0.2s linear;
+    &:hover {
+        border: 1px solid black;
+        background-color: white;
+        color: black;
+
+    } */
+}
+/* Reusable code */
 
 
 /* Section Navbar Start here */
@@ -40,7 +70,7 @@ p {
     justify-content: space-between;
 
     & .nav-logo p{
-        font-size: 2.6rem;
+        font-size: 3.5rem;
     }
     & .nav-links {
         display: flex;
@@ -51,21 +81,79 @@ p {
         list-style-type: none;
         font-weight: 600;
 
-        & .links, .btn {
+        
+        & .links{
             cursor: pointer;
-            border-bottom: 2px solid black;
-        }
-        & .links {
-            
-        }
+            /* border-bottom: 2px solid black; */
+            text-transform:capitalize;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -0.2rem;
+                width: 0;
+                border: 1px solid #24287d;
+                border-radius: 1rem;
+                opacity: 0;
+                transition: all 0.2s linear;
+            }
+            &:hover::after {
+                width: 100%;
+                opacity: 1;
+                color: #2b3077;
+            }
+            &:hover {
+                color: #252b87;
+            }
 
-        & .btn {
-            background-color: #ff6500;
-            padding: 1rem 2rem;
-            border-radius: 2rem;
-            color: white;
-            font-weight: 800;
         }
     }
 }
 /* Section Navbar End here */
+
+
+
+/* here section start here */
+.section-hero .grid-two--cols {
+    place-items: start;
+    gap: 2rem;
+    & .left-content {
+        align-items: start;
+        justify-content: center;
+        gap: 2rem;
+        flex-direction: column;
+
+        & .heading {
+            font-size: 6rem;
+            padding-top: 4rem;
+            & .coolest {
+                color: #ff6500;
+            }
+        }
+        & .para {
+            padding-top: 3rem;
+        }
+        & .btn {
+            width: 12rem;
+            height: 5rem;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+    }
+    & .right-image {
+        width: 100%;
+        height: 100%;
+        align-items: start;
+        justify-content: center;
+        & img {
+            width: 100%;
+            height: 85%;
+            background-size: cover;
+            filter: drop-shadow(3px 3px  rgba(53, 52, 52, 0.5));
+            
+
+        }
+    }
+}
+/* here section end here */
